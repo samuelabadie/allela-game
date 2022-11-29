@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;    
 
 public class playerBehaviour : MonoBehaviour
 
@@ -11,15 +11,16 @@ public class playerBehaviour : MonoBehaviour
     [SerializeField] public float radius = .4f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private int initialPositionX = -9;
+    [SerializeField] private int initialPositionX = -8;
     [SerializeField] private int initialPositionY = -4;
 
-    int currentSceneId = SceneManager.GetActiveScene().buildIndex;
+    int sceneNumber;
 
 
     private bool doubleJump;
 
     private Rigidbody2D player;
+
     // Awake is called before Start
     private void Awake()
 
@@ -30,7 +31,7 @@ public class playerBehaviour : MonoBehaviour
     void Start()
     {
         player.transform.localPosition = new Vector2(initialPositionX, initialPositionY);
-
+        sceneNumber = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -87,7 +88,7 @@ public class playerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Tueur"))
         {
-            SceneManager.LoadScene(currentSceneId);
+            SceneManager.LoadScene(sceneNumber);
         }
     }
 
