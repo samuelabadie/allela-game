@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerBehaviour : MonoBehaviour
 
 {
-    [SerializeField] private float speed = 5;
+    [SerializeField] private float speed = 4;
     [SerializeField] public float jumpPower = 5f;
-    [SerializeField] public float radius = .5f;
+    [SerializeField] public float radius = .4f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    
+    [SerializeField] private int initialPositionX = -9;
+    [SerializeField] private int initialPositionY = -4;
+
+    int currentSceneId = SceneManager.GetActiveScene().buildIndex;
+
+
     private bool doubleJump;
 
     private Rigidbody2D player;
@@ -23,6 +29,7 @@ public class playerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player.transform.localPosition = new Vector2(initialPositionX, initialPositionY);
 
     }
 
@@ -76,5 +83,12 @@ public class playerBehaviour : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, radius, groundLayer);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Tueur"))
+        {
+            SceneManager.LoadScene(currentSceneId);
+        }
+    }
 
 }
