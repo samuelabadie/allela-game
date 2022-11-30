@@ -17,6 +17,8 @@ public class playerBehaviour : MonoBehaviour
     [SerializeField] private AudioSource dieSound;
     [SerializeField] private AudioSource winSound;
 
+    public bool isDoubleJumpEnabled = false;
+
     int sceneNumber;
 
 
@@ -45,25 +47,45 @@ public class playerBehaviour : MonoBehaviour
     }
     private void Jump()
     {
-        if (onLand() && !Input.GetButton("Jump"))
-        {
-            doubleJump = false;
-        }
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (onLand() || doubleJump)
-            {
-                // DOuble jump here
-                player.velocity = new Vector2(player.velocity.x, jumpPower);
-                jumpSound.Play();
 
-                doubleJump = !doubleJump;
+        if (isDoubleJumpEnabled)
+        {
+            if (onLand() && !Input.GetButton("Jump"))
+            {
+                doubleJump = false;
+            }
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (onLand() || doubleJump)
+                {
+                    // DOuble jump here
+                    player.velocity = new Vector2(player.velocity.x, jumpPower);
+                    jumpSound.Play();
+
+                    doubleJump = !doubleJump;
+                }
+            }
+            if (Input.GetButtonUp("Jump") && player.velocity.y > 0f)
+            {
+                player.velocity = new Vector2(player.velocity.x, player.velocity.y * 0.5f);
+            }
+        } else
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (onLand())
+                {
+                    // DOuble jump here
+                    player.velocity = new Vector2(player.velocity.x, jumpPower);
+                    jumpSound.Play();
+                }
+            }
+            if (Input.GetButtonUp("Jump") && player.velocity.y > 0f)
+            {
+                player.velocity = new Vector2(player.velocity.x, player.velocity.y * 0.5f);
             }
         }
-        if (Input.GetButtonUp("Jump") && player.velocity.y > 0f)
-        {
-            player.velocity = new Vector2(player.velocity.x, player.velocity.y * 0.5f);
-        }
+       
     }
     private void Move()
     {
@@ -95,6 +117,11 @@ public class playerBehaviour : MonoBehaviour
             
             // faire delay here
             Die();
+        }
+        if (other.CompareTag("DoubleJump"))
+        {
+
+            isDoubleJumpEnabled = true;
         }
         if (other.CompareTag("Porte"))
         {
