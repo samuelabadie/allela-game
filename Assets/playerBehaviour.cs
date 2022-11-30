@@ -13,6 +13,9 @@ public class playerBehaviour : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private int initialPositionX = -8;
     [SerializeField] private int initialPositionY = -4;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource dieSound;
+    [SerializeField] private AudioSource winSound;
 
     int sceneNumber;
 
@@ -52,6 +55,7 @@ public class playerBehaviour : MonoBehaviour
             {
                 // DOuble jump here
                 player.velocity = new Vector2(player.velocity.x, jumpPower);
+                jumpSound.Play();
 
                 doubleJump = !doubleJump;
             }
@@ -88,10 +92,14 @@ public class playerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Tueur"))
         {
+            dieSound.Play();
+
+      
             SceneManager.LoadScene(sceneNumber);
         }
         if (other.CompareTag("Porte"))
         {
+            winSound.Play();
             SceneManager.LoadScene(sceneNumber + 1);
         }
     }
