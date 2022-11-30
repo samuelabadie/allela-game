@@ -92,16 +92,25 @@ public class playerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Tueur"))
         {
-            dieSound.Play();
-
-      
-            SceneManager.LoadScene(sceneNumber);
+            
+            // faire delay here
+            Die();
         }
         if (other.CompareTag("Porte"))
         {
             winSound.Play();
-            SceneManager.LoadScene(sceneNumber + 1);
+            passLevel();
         }
+    }
+    private void Die()
+    {
+        dieSound.Play();
+        player.transform.localPosition = new Vector2(initialPositionX, initialPositionY);
+        //SceneManager.LoadScene(sceneNumber);
+    }
+    private void passLevel()
+    {
+        SceneManager.LoadScene(sceneNumber + 1);
     }
 
 }
