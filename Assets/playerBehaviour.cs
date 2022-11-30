@@ -90,6 +90,10 @@ public class playerBehaviour : MonoBehaviour
         {
             SceneManager.LoadScene(sceneNumber);
         }
+        if (other.CompareTag("Porte"))
+        {
+            SceneManager.LoadScene(sceneNumber + 1);
+        }
     }
 
 }
