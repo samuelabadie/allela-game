@@ -5,8 +5,6 @@ using UnityEngine;
 public class DoubleJumpButtonController : MonoBehaviour
 {
 
-    [SerializeField] private int initialPositionX = -1;
-    [SerializeField] private int initialPositionY = -1;
 
     // Start is called before the first frame update
     void Start()
