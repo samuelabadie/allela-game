@@ -114,13 +114,12 @@ public class playerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Tueur"))
         {
-            
             // faire delay here
             Die();
         }
         if (other.CompareTag("DoubleJump"))
         {
-
+            Destroy(other.gameObject);
             isDoubleJumpEnabled = true;
         }
         if (other.CompareTag("Porte"))
@@ -133,11 +132,13 @@ public class playerBehaviour : MonoBehaviour
     {
         dieSound.Play();
         player.transform.localPosition = new Vector2(initialPositionX, initialPositionY);
+
         //SceneManager.LoadScene(sceneNumber);
     }
     private void passLevel()
     {
         SceneManager.LoadScene(sceneNumber + 1);
     }
+
 
 }
