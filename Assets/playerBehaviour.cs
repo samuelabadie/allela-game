@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class playerBehaviour : MonoBehaviour
 
 {
-
     [SerializeField] private float speed = 4;
     [SerializeField] public float jumpPower = 5f;
     [SerializeField] public float radius = .4f;
@@ -17,6 +16,9 @@ public class playerBehaviour : MonoBehaviour
     [SerializeField] private AudioSource jumpSound;
     [SerializeField] private AudioSource dieSound;
     [SerializeField] private AudioSource winSound;
+    Animator playerAnimator;
+    SpriteRenderer playerRenderer;
+
 
     public bool isDoubleJumpEnabled = false;
 
@@ -31,6 +33,8 @@ public class playerBehaviour : MonoBehaviour
     private void Awake()
 
     {
+        playerAnimator = GetComponent<Animator>();
+        playerRenderer = GetComponent<SpriteRenderer>();
         player = GetComponent<Rigidbody2D>();
     }
     // Start is called before the first frame update
@@ -92,11 +96,25 @@ public class playerBehaviour : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
+            playerAnimator.SetBool("isRunning", true);
             transform.position += Vector3.right * Time.deltaTime * speed;
+            if (playerRenderer.flipX == true)
+            {
+                playerRenderer.flipX = false;
+            }
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
+            playerAnimator.SetBool("isRunning", true);
             transform.position -= Vector3.right * Time.deltaTime * speed;
+            if (playerRenderer.flipX == false)
+            {
+                playerRenderer.flipX = true;
+            }
+        }
+        else
+        {
+            playerAnimator.SetBool("isRunning", false);
         }
     }
     void OnDrawGizmosSelected()
