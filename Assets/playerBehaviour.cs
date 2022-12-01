@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class playerBehaviour : MonoBehaviour
 
 {
+
     [SerializeField] private float speed = 4;
     [SerializeField] public float jumpPower = 5f;
     [SerializeField] public float radius = .4f;
