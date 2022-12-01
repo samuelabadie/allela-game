@@ -11,8 +11,8 @@ public class playerBehaviour : MonoBehaviour
     [SerializeField] public float radius = .4f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private int initialPositionX = -8;
-    [SerializeField] private int initialPositionY = -4;
+    [SerializeField] private float initialPositionX = -8.02f;
+    [SerializeField] private float initialPositionY = -4.15f;
     [SerializeField] private AudioSource jumpSound;
     [SerializeField] private AudioSource dieSound;
     [SerializeField] private AudioSource winSound;
@@ -20,13 +20,10 @@ public class playerBehaviour : MonoBehaviour
     SpriteRenderer playerRenderer;
 
 
-    public bool isDoubleJumpEnabled = false;
+    public bool isDoubleJumpEnabled = true;
 
     int sceneNumber;
-
-
     private bool doubleJump;
-
     private Rigidbody2D player;
 
     // Awake is called before Start
@@ -40,8 +37,13 @@ public class playerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.transform.localPosition = new Vector2(initialPositionX, initialPositionY);
         sceneNumber = SceneManager.GetActiveScene().buildIndex;
+        sceneNumber = SceneManager.GetActiveScene().buildIndex;
+
+        if (sceneNumber == 1)
+        {
+            isDoubleJumpEnabled = false;
+        }
     }
 
     // Update is called once per frame
