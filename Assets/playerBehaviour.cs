@@ -22,7 +22,7 @@ public class playerBehaviour : MonoBehaviour
 
     public bool isDoubleJumpEnabled = true;
 
-    int sceneNumber;
+    public int sceneNumber;
     private bool doubleJump;
     private Rigidbody2D player;
 
