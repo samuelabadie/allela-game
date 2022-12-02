@@ -38,11 +38,13 @@ public class playerBehaviour : MonoBehaviour
     void Start()
     {
         sceneNumber = SceneManager.GetActiveScene().buildIndex;
-        sceneNumber = SceneManager.GetActiveScene().buildIndex;
 
         if (sceneNumber == 1)
         {
             isDoubleJumpEnabled = false;
+        }else
+        {
+            isDoubleJumpEnabled = true;
         }
     }
 
