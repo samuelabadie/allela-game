@@ -401,14 +401,14 @@ MonoBehaviour:
   m_ScreenX: 0.29
   m_ScreenY: 0.5
   m_CameraDistance: 20
-  m_DeadZoneWidth: 0.17
+  m_DeadZoneWidth: 0.15
   m_DeadZoneHeight: 0.18
   m_DeadZoneDepth: 0
-  m_UnlimitedSoftZone: 1
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 1.37
-  m_BiasX: -0.0000001892211
-  m_BiasY: -0.00000090158284
+  m_UnlimitedSoftZone: 0
+  m_SoftZoneWidth: 0.52
+  m_SoftZoneHeight: 0.67
+  m_BiasX: 0
+  m_BiasY: -0.0000007298528
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
