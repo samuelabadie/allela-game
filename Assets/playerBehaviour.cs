@@ -153,7 +153,7 @@ public class playerBehaviour : MonoBehaviour
     }
     private void Die()
     {
-        dieSound.Play();
+        //dieSound.Play();
         player.transform.localPosition = new Vector2(initialPositionX, initialPositionY);
 
         //SceneManager.LoadScene(sceneNumber);
