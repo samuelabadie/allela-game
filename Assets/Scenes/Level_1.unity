@@ -899,7 +899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294518637}
   - component: {fileID: 294518636}
-  - component: {fileID: 294518635}
+  - component: {fileID: 294518638}
   m_Layer: 6
   m_Name: Francois-level-design_0015_Musique
   m_TagString: Untagged
@@ -907,32 +907,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &294518635
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294518634}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.13714433, y: -0.0016732216}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.09, y: 1.07}
-    newSize: {x: 1.09, y: 1.07}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8157115, y: 1.0666537}
-  m_EdgeRadius: 0
 --- !u!212 &294518636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1000,6 +974,31 @@ Transform:
   m_Father: {fileID: 1604564667}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &294518638
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294518634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5251784, y: -0.2378583}
+  - {x: -0.25527906, y: -0.21869731}
+  - {x: -0.28901958, y: 0.45911932}
+  - {x: 0.081288815, y: 0.4856274}
+  - {x: 0.5185713, y: 0.528574}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &316610732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534689123}
   - component: {fileID: 534689122}
-  - component: {fileID: 534689121}
+  - component: {fileID: 534689124}
   m_Layer: 6
   m_Name: Francois-level-design_0014_Colin's
   m_TagString: Untagged
@@ -1766,32 +1765,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &534689121
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534689120}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.034053802, y: -0.004961014}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.33, y: 1.2}
-    newSize: {x: 1.33, y: 1.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8381109, y: 1.194787}
-  m_EdgeRadius: 0
 --- !u!212 &534689122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1859,6 +1832,32 @@ Transform:
   m_Father: {fileID: 1604564667}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &534689124
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534689120}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.6882487, y: -0.35260424}
+  - {x: -0.3798337, y: -0.35127798}
+  - {x: -0.45542526, y: 0.5445123}
+  - {x: 0.37930107, y: 0.59335315}
+  - {x: 0.3694029, y: -0.3604335}
+  - {x: 0.6495009, y: -0.30998173}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &554851722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,8 +3652,8 @@ EdgeCollider2D:
   - {x: -0.1741407, y: -0.1167588}
   - {x: -0.089965075, y: -0.01567547}
   - {x: 0.09090744, y: 0.2540382}
-  - {x: 0.15852693, y: 0.23360607}
-  - {x: 0.18499999, y: 0.00000023841858}
+  - {x: 0.22377053, y: 0.20714031}
+  - {x: 0.18585913, y: -0.24450913}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -6030,9 +6029,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.20586884, y: 0.101567745}
-  - {x: 0.02533266, y: 0.015895963}
-  - {x: 0.22, y: -0.066239834}
+  - {x: -0.2266287, y: 0.019633763}
+  - {x: -0.19994423, y: 0.10492481}
+  - {x: -0.18044727, y: 0.16187647}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -6096,14 +6095,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741340534}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.56784445, w: 0.8231359}
   m_LocalPosition: {x: 2.4066, y: 2.0881, z: 0.62527937}
   m_LocalScale: {x: 1.2286, y: 1.2286, z: 1.2286}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1604564667}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.2}
 --- !u!1 &1762009420
 GameObject:
   m_ObjectHideFlags: 0
